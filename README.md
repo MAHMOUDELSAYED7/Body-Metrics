@@ -15,25 +15,26 @@ This is a simple BMI (Body Mass Index) calculator app built using Flutter. It he
 ## Getting Started
 To run this app on your local machine, follow these steps:
 1. **Clone the repository:**
-    
-    git clone https://github.com/your-username/bmi-calculator-flutter.git
+    ```
+    git clone https://github.com/MahmoudElSayed96/Flutter-BMI-calculator.git
     cd bmi-calculator-flutter
+    ```
     
 
 2. **Install dependencies:**
     Make sure you have Flutter and Dart installed. Then, run:
 
-    
+    ```
     flutter pub get
-    
+    ```
 
 3. **Run the app:**
 
     Connect a device or start an emulator, and then run:
 
-    
+    ```
     flutter run
-    
+    ```
 
 ## Dependencies
 
@@ -54,11 +55,4 @@ Contributions are welcome! If you find any issues or have suggestions, feel free
 3. Make your changes and commit them: `git commit -am 'Add some feature'`.
 4. Push the branch to your fork: `git push origin feature-name`.
 5. Open a pull request detailing your changes.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
 ---
-
-Feel free to customize this README according to your project's specific details and structure. Good luck with your BMI Calculator Flutter app!
