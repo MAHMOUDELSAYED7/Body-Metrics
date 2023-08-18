@@ -3,5 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:project_1/home/part1.dart';
 
 void main() {
-  runApp(myapp());
+  runApp(app());
+// حفظيولا
 }

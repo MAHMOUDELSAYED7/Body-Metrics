@@ -4,14 +4,14 @@ import 'package:flutter/material.dart';
 import 'package:project_1/pages/part2.dart';
 import 'package:project_1/pages/part4.dart';
 
-class myapp extends StatefulWidget {
-  const myapp({super.key});
+class app extends StatefulWidget {
+  const app({super.key});
 
   @override
-  State<myapp> createState() => _myappState();
+  State<app> createState() => _appState();
 }
 
-class _myappState extends State<myapp> {
+class _appState extends State<app> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
