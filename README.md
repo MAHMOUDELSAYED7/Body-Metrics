@@ -7,8 +7,10 @@ This is a simple BMI (Body Mass Index) calculator app built using Flutter. It he
 - Display of BMI value and corresponding weight status.
 - Minimalistic and intuitive user interface.
 ## Screenshots
-![Screenshot 1](screenshots/screenshot1.png)
-![Screenshot 2](screenshots/screenshot2.png)
+![image](https://github.com/MahmoudElSayed96/Flutter-BMI-calculator/assets/133010029/67a3255b-0bf0-405d-8c35-3540747977ea)
+
+![image](https://github.com/MahmoudElSayed96/Flutter-BMI-calculator/assets/133010029/9d8517f9-7cac-419a-b608-9243d3f2231d)
+
 ## Getting Started
 To run this app on your local machine, follow these steps:
 1. **Clone the repository:**
