@@ -21,28 +21,21 @@ class GenderCard extends StatelessWidget {
       child: InkWell(
         onTap: onTap,
         child: Container(
-          margin: EdgeInsets.symmetric(horizontal: 8.w),
           alignment: Alignment.center,
-          height: 50.w,
+          height: 150.w,
           decoration: BoxDecoration(
               color: MyColors.white, borderRadius: BorderRadius.circular(10.w)),
-          child: Row(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              const Spacer(
-                flex: 2,
-              ),
               Icon(
                 iconData,
-                size: 25.w,
+                size: 70.w,
               ),
-              const Spacer(),
               CustomText(
                 title,
-                fontSize: 15,
+                fontSize: 18,
                 fontWeight: FontWeight.w500,
-              ),
-              const Spacer(
-                flex: 4,
               ),
             ],
           ),
