@@ -21,7 +21,7 @@ class ColorModeSwitch extends StatelessWidget {
         children: [
           Icon(
             Icons.light_mode,
-            color: MyColors.blue,
+            color: MyColors.green,
           ),
           Icon(
             Icons.dark_mode,

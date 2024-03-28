@@ -29,7 +29,7 @@ class CustomButton extends StatelessWidget {
             foregroundColor: MyColors.white,
             shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(borderRadius ?? 8)),
-            backgroundColor: color ?? MyColors.blue,
+            backgroundColor: color ?? MyColors.green,
             fixedSize: Size(width ?? double.maxFinite, height ?? 54.h)),
         onPressed: onPressed,
         child: widget ??
@@ -37,8 +37,8 @@ class CustomButton extends StatelessWidget {
                 style: TextStyle(
                   fontFamily: "Poppins",
                   fontWeight: FontWeight.w600,
-                  color: MyColors.white,
-                  fontSize: fontSize ?? 16.sp,
+                  color: MyColors.black,
+                  fontSize: fontSize ?? 18.sp,
                 )));
   }
 }
