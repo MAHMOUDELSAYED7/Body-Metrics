@@ -47,7 +47,7 @@ class OperationScreen extends ConsumerWidget {
             _buildCounterCard(ref),
             const Spacer(flex: 2),
             CustomButton(
-              title: "Calculate",
+              title: "Lets Go",
               onPressed: () =>
                   Navigator.pushNamed(context, MyRoutes.resultRoute),
             ),

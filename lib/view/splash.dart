@@ -1,6 +1,7 @@
 import 'package:bmi_calculator/widgets/loading_indicator.dart';
 import 'package:flutter/material.dart';
 
+import '../constant/color.dart';
 import '../constant/string.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -18,7 +19,7 @@ class _SplashScreenState extends State<SplashScreen> {
   }
 
   goToOperationScreen() {
-    Future.delayed(const Duration(seconds: 2), () {
+    Future.delayed(const Duration(seconds: 1), () {
       Navigator.pushReplacementNamed(context, MyRoutes.operationRoute);
     });
   }
@@ -26,6 +27,7 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
+      backgroundColor: MyColors.black,
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [

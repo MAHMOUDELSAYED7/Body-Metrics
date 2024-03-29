@@ -33,7 +33,6 @@ dependencies:
   flutter_riverpod: ^2.5.1
   flutter_screenutil: ^5.9.0
   slide_switcher: ^1.1.2
-  slider_switch: ^0.0.14
   vertical_weight_slider: ^2.6.0
 
 dev_dependencies:
