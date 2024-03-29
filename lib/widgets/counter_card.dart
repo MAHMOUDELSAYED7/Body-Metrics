@@ -77,21 +77,22 @@ class MyCounter extends StatelessWidget {
 }
 
 class WeightSlider extends StatefulWidget {
-  const WeightSlider({super.key});
-
+  const WeightSlider(
+      {super.key, required this.weight, required this.onChanged});
+  final double weight;
+  final void Function(double) onChanged;
   @override
   WeightSliderState createState() => WeightSliderState();
 }
 
 class WeightSliderState extends State<WeightSlider> {
   WeightSliderController? _controller;
-  double _weight = 80.0;
 
   @override
   void initState() {
     super.initState();
     _controller = WeightSliderController(
-        initialWeight: _weight, minWeight: 0, interval: 0.05);
+        initialWeight: widget.weight, minWeight: 0, interval: 0.05);
   }
 
   @override
@@ -125,8 +126,9 @@ class WeightSliderState extends State<WeightSlider> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.end,
                 children: [
+                  const Spacer(flex: 3),
                   CustomText(
-                    _weight.toStringAsFixed(1),
+                    widget.weight.toStringAsFixed(1),
                     color: MyColors.black,
                     fontSize: 28,
                     fontWeight: FontWeight.w600,
@@ -138,6 +140,7 @@ class WeightSliderState extends State<WeightSlider> {
                     fontSize: 14,
                     fontWeight: FontWeight.w600,
                   ),
+                  const Spacer(flex: 2),
                 ],
               )),
           Expanded(
@@ -151,11 +154,7 @@ class WeightSliderState extends State<WeightSlider> {
                 smallColor: MyColors.grey,
                 gap: 30.0.w,
               ),
-              onChanged: (double value) {
-                setState(() {
-                  _weight = value;
-                });
-              },
+              onChanged: widget.onChanged,
               indicator: Container(
                 height: 5.0.w,
                 alignment: Alignment.centerLeft,

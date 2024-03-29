@@ -3,15 +3,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../constant/color.dart';
 
-class MySlider extends StatefulWidget {
-  const MySlider({super.key});
-
-  @override
-  State<MySlider> createState() => _MySliderState();
-}
-
-class _MySliderState extends State<MySlider> {
-  double _value = 150;
+class MySlider extends StatelessWidget {
+  const MySlider({super.key, required this.value, this.onChanged});
+  final double value;
+  final void Function(double)? onChanged;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -37,8 +32,9 @@ class _MySliderState extends State<MySlider> {
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.end,
               children: [
+                const Spacer(flex: 5),
                 CustomText(
-                  _value.toStringAsFixed(1),
+                  value.toStringAsFixed(1),
                   fontSize: 28,
                   fontWeight: FontWeight.w600,
                   color: MyColors.black,
@@ -48,6 +44,7 @@ class _MySliderState extends State<MySlider> {
                   color: MyColors.black,
                   fontWeight: FontWeight.w600,
                 ),
+                const Spacer(flex: 4),
               ],
             ),
           ),
@@ -62,11 +59,8 @@ class _MySliderState extends State<MySlider> {
               activeColor: MyColors.green,
               min: 110,
               max: 190,
-              value: _value,
-              onChanged: (value) {
-                _value = value;
-                setState(() {});
-              },
+              value: value,
+              onChanged: onChanged,
             ),
           ),
           const Spacer(),
