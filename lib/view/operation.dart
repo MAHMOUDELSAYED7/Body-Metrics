@@ -21,7 +21,7 @@ class OperationScreen extends ConsumerWidget {
         padding: EdgeInsets.symmetric(horizontal: 20.w),
         child: Column(
           children: [
-            SizedBox(height: 70.w),
+            const Spacer(flex: 2),
             const Align(
               alignment: Alignment.centerLeft,
               child: CustomText(
@@ -39,44 +39,57 @@ class OperationScreen extends ConsumerWidget {
                 color: MyColors.green,
               ),
             ),
-            SizedBox(height: 20.w),
-            GenderSlider(
-              switcherIndex1: ref.watch(bmiProvider).switcherIndex1,
-              onSelect: ref.read(bmiProvider).onGenderSelect,
-            ),
+            const Spacer(),
+            _buildGenderCard(ref),
             SizedBox(height: 15.w),
-            MySlider(
-              value: ref.watch(bmiProvider).height,
-              onChanged: ref.read(bmiProvider).onHeightChanged,
-            ),
+            _buildSliderCard(ref),
             SizedBox(height: 15.w),
-            Row(
-              children: [
-                 Expanded(
-                  child: MyCounter(
-                    counter: ref.watch(bmiProvider).age,
-                    incrementMethod: ref.read(bmiProvider).incrementAge,
-                    decrementMethod: ref.read(bmiProvider).decrementAge,
-                  ),
-                ),
-                SizedBox(width: 15.w),
-                Expanded(
-                  child: WeightSlider(
-                    weight: ref.watch(bmiProvider).weight,
-                    onChanged: ref.read(bmiProvider).onWeightChanged,
-                  ),
-                ),
-              ],
-            ),
-            SizedBox(height: 15.w),
+            _buildCounterCard(ref),
+            const Spacer(flex: 2),
             CustomButton(
               title: "Calculate",
               onPressed: () =>
                   Navigator.pushNamed(context, MyRoutes.resultRoute),
-            )
+            ),
+            const Spacer(flex: 2),
           ],
         ),
       ),
+    );
+  }
+
+  Widget _buildGenderCard(WidgetRef ref) {
+    return GenderSlider(
+      switcherIndex1: ref.watch(bmiProvider).switcherIndex1,
+      onSelect: ref.read(bmiProvider).onGenderSelect,
+    );
+  }
+
+  Widget _buildSliderCard(WidgetRef ref) {
+    return MySlider(
+      value: ref.watch(bmiProvider).height,
+      onChanged: ref.read(bmiProvider).onHeightChanged,
+    );
+  }
+
+  Widget _buildCounterCard(WidgetRef ref) {
+    return Row(
+      children: [
+        Expanded(
+          child: MyCounter(
+            counter: ref.watch(bmiProvider).age,
+            incrementMethod: ref.read(bmiProvider).incrementAge,
+            decrementMethod: ref.read(bmiProvider).decrementAge,
+          ),
+        ),
+        SizedBox(width: 15.w),
+        Expanded(
+          child: WeightSlider(
+            weight: ref.watch(bmiProvider).weight,
+            onChanged: ref.read(bmiProvider).onWeightChanged,
+          ),
+        ),
+      ],
     );
   }
 }

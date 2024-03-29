@@ -10,7 +10,7 @@ class BmiController extends ChangeNotifier {
   double weight = 70;
   double height = 170;
   int switcherIndex1 = 0;
-
+  double result = 0;
   // BmiController({
   //   required this.age,
   //   required this.weight,
@@ -27,18 +27,23 @@ class BmiController extends ChangeNotifier {
     notifyListeners();
   }
 
-  onWeightChanged(double value) {
+  void onWeightChanged(double value) {
     weight = value;
     notifyListeners();
   }
 
-  onHeightChanged(double value) {
+  void onHeightChanged(double value) {
     height = value;
     notifyListeners();
   }
 
-  onGenderSelect(int index) {
+  void onGenderSelect(int index) {
     switcherIndex1 = index;
+    notifyListeners();
+  }
+
+  void calculateBmi() {
+    result = weight / ((height / 100) * (height / 100));
     notifyListeners();
   }
 }

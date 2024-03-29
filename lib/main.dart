@@ -1,4 +1,5 @@
 import 'package:bmi_calculator/constant/string.dart';
+import 'package:bmi_calculator/helper/app_router.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -20,14 +21,10 @@ class MyApp extends StatelessWidget {
       minTextAdapt: true,
       splitScreenMode: true,
       builder: (_, child) {
-        return MaterialApp(
+        return const MaterialApp(
           debugShowCheckedModeBanner: false,
-          initialRoute: MyRoutes.operationRoute,
-          routes: {
-            MyRoutes.initRoute: (context) => const SplashScreen(),
-            MyRoutes.operationRoute: (context) => const OperationScreen(),
-            MyRoutes.resultRoute: (context) => const ResultScreen(),
-          },
+          initialRoute: MyRoutes.initRoute,
+          onGenerateRoute: AppRouter.onGenerateRoute,
         );
       },
     );
