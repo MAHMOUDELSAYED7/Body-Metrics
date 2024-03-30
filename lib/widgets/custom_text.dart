@@ -1,5 +1,6 @@
 import 'package:bmi_calculator/constant/string.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class CustomText extends StatelessWidget {
   final String text;
@@ -26,7 +27,7 @@ class CustomText extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final screenWidth = MediaQuery.of(context).size.width;
-    final scaleFactor = screenWidth / 380;
+    final scaleFactor = screenWidth / 400;
     final adjustedFontSize = fontSize * scaleFactor;
 
     return Text(

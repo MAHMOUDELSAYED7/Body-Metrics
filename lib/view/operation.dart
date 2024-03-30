@@ -9,6 +9,7 @@ import '../widgets/counter_card.dart';
 import '../widgets/custom_button.dart';
 import '../widgets/custom_slider.dart';
 import '../widgets/gender_card.dart';
+import '../widgets/weight_slider.dart';
 
 class OperationScreen extends ConsumerWidget {
   const OperationScreen({super.key});
@@ -22,13 +23,14 @@ class OperationScreen extends ConsumerWidget {
         child: Column(
           children: [
             const Spacer(flex: 2),
-            const Align(
-              alignment: Alignment.centerLeft,
-              child: CustomText(
-                "Welcome",
-                fontSize: 15,
-                color: MyColors.green,
-              ),
+            const Row(
+              children: [
+                CustomText(
+                  "Welcome",
+                  fontSize: 15,
+                  color: MyColors.green,
+                ),
+              ],
             ),
             const Align(
               alignment: Alignment.centerLeft,
@@ -41,9 +43,9 @@ class OperationScreen extends ConsumerWidget {
             ),
             const Spacer(),
             _buildGenderCard(ref),
-            SizedBox(height: 15.w),
+            SizedBox(height: 15.h),
             _buildSliderCard(ref),
-            SizedBox(height: 15.w),
+            SizedBox(height: 15.h),
             _buildCounterCard(ref),
             const Spacer(flex: 2),
             CustomButton(
@@ -61,9 +63,15 @@ class OperationScreen extends ConsumerWidget {
   }
 
   Widget _buildGenderCard(WidgetRef ref) {
-    return GenderSlider(
-      switcherIndex1: ref.watch(bmiProvider).switcherIndex1,
-      onSelect: ref.read(bmiProvider).onGenderSelect,
+    return Row(
+      children: [
+        Expanded(
+          child: GenderSlider(
+            switcherIndex1: ref.watch(bmiProvider).switcherIndex1,
+            onSelect: ref.read(bmiProvider).onGenderSelect,
+          ),
+        ),
+      ],
     );
   }
 

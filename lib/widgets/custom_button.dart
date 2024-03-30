@@ -1,6 +1,6 @@
+import 'package:bmi_calculator/helper/screen_size.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
 import '../constant/color.dart';
 import 'custom_text.dart';
 
@@ -29,9 +29,9 @@ class CustomButton extends StatelessWidget {
         style: ElevatedButton.styleFrom(
             foregroundColor: MyColors.white,
             shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(borderRadius ?? 8)),
+                borderRadius: BorderRadius.circular(borderRadius ?? 10.dm)),
             backgroundColor: color ?? MyColors.green,
-            fixedSize: Size(width ?? double.maxFinite, height ?? 54.h)),
+            fixedSize: Size(ScreenSize.width, ScreenSize.width * 0.12)),
         onPressed: onPressed,
         child: widget ??
             CustomText(

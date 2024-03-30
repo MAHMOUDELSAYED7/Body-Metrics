@@ -2,6 +2,7 @@ import 'package:bmi_calculator/widgets/custom_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../constant/color.dart';
+import '../helper/screen_size.dart';
 
 class MySlider extends StatelessWidget {
   const MySlider({super.key, required this.value, this.onChanged});
@@ -10,9 +11,9 @@ class MySlider extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: ScreenUtil.defaultSize.width / 2,
+      height: ScreenSize.height / 4.6,
       decoration: BoxDecoration(
-          color: MyColors.black, borderRadius: BorderRadius.circular(15)),
+          color: MyColors.black, borderRadius: BorderRadius.circular(15.dm)),
       child: Column(
         children: [
           const CustomText(
@@ -21,13 +22,13 @@ class MySlider extends StatelessWidget {
             fontWeight: FontWeight.w500,
             color: MyColors.green,
           ),
-          SizedBox(height: 8.w),
+          SizedBox(height: 8.h),
           Container(
-            padding: EdgeInsets.symmetric(vertical: 5.w),
+            padding: EdgeInsets.symmetric(vertical: 5.h),
             alignment: Alignment.center,
             decoration: BoxDecoration(
                 color: MyColors.green,
-                borderRadius: BorderRadius.circular(10.w)),
+                borderRadius: BorderRadius.circular(10.dm)),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.end,
@@ -52,7 +53,7 @@ class MySlider extends StatelessWidget {
           SliderTheme(
             data: SliderThemeData(
               trackHeight: 10.w,
-              thumbShape: RoundSliderThumbShape(enabledThumbRadius: 12.w),
+              thumbShape: RoundSliderThumbShape(enabledThumbRadius: 12.dm),
             ),
             child: Slider(
               inactiveColor: MyColors.silver,

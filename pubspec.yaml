@@ -77,8 +77,5 @@ flutter:
     - family: GermaniaOne
       fonts:
         - asset: assets/fonts/GermaniaOne-Regular.ttf
-    - family: RubikScribble
-      fonts:
-        - asset: assets/fonts/RubikScribble-Regular.ttf
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages

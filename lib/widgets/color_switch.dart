@@ -12,7 +12,7 @@ class ColorModeSwitch extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 37.w,
+      height: 37.h,
       width: 101.w,
       decoration: BoxDecoration(
           color: MyColors.white, borderRadius: BorderRadius.circular(10.w)),
