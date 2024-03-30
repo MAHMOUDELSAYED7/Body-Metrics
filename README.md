@@ -1,4 +1,4 @@
-# BMI Calculator Flutter App
+# BMI Calculator App
 ## Overview
 This is a simple BMI (Body Mass Index) calculator app built using Flutter. It helps users calculate their BMI based on their height and weight inputs. The app provides a user-friendly interface and displays the calculated BMI along with a corresponding weight status category (underweight, normal weight, overweight, or obese).
 ## Features
