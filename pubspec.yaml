@@ -71,5 +71,14 @@ flutter:
           weight: 400
         - asset: assets/fonts/Poppins-SemiBold.ttf
           weight: 600
+    - family: MetalMania
+      fonts:
+        - asset: assets/fonts/MetalMania-Regular.ttf
+    - family: GermaniaOne
+      fonts:
+        - asset: assets/fonts/GermaniaOne-Regular.ttf
+    - family: RubikScribble
+      fonts:
+        - asset: assets/fonts/RubikScribble-Regular.ttf
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages

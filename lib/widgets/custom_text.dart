@@ -1,3 +1,4 @@
+import 'package:bmi_calculator/constant/string.dart';
 import 'package:flutter/material.dart';
 
 class CustomText extends StatelessWidget {
@@ -14,7 +15,7 @@ class CustomText extends StatelessWidget {
     this.text, {
     super.key,
     this.fontSize = 14,
-    this.fontFamily = 'Poppins',
+    this.fontFamily = MyFontFamily.germania,
     this.fontWeight,
     this.color,
     this.textAlign,

@@ -48,8 +48,10 @@ class OperationScreen extends ConsumerWidget {
             const Spacer(flex: 2),
             CustomButton(
               title: "Lets Go",
-              onPressed: () =>
-                  Navigator.pushNamed(context, MyRoutes.resultRoute),
+              onPressed: () {
+                Navigator.pushNamed(context, MyRoutes.resultRoute);
+                ref.read(bmiProvider).calculateBmi();
+              },
             ),
             const Spacer(flex: 2),
           ],

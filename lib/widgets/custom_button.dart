@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../constant/color.dart';
+import 'custom_text.dart';
 
 class CustomButton extends StatelessWidget {
   const CustomButton(
@@ -33,12 +34,11 @@ class CustomButton extends StatelessWidget {
             fixedSize: Size(width ?? double.maxFinite, height ?? 54.h)),
         onPressed: onPressed,
         child: widget ??
-            Text(title ?? "",
-                style: TextStyle(
-                  fontFamily: "Poppins",
-                  fontWeight: FontWeight.w600,
-                  color: MyColors.black,
-                  fontSize: fontSize ?? 18.sp,
-                )));
+            CustomText(
+              title ?? "",
+              color: MyColors.black,
+              fontSize: fontSize ?? 18,
+              fontWeight: FontWeight.w600,
+            ));
   }
 }
