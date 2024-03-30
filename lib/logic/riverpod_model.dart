@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../constant/color.dart';
+import '../generated/l10n.dart';
 
 final bmiProvider = ChangeNotifierProvider<BmiController>((ref) {
   return BmiController();
@@ -14,8 +15,8 @@ class BmiController extends ChangeNotifier {
   int switcherIndex1 = 0;
   double result = 0;
   Color? resultColor = MyColors.green;
-  String resultTitle = "Normal";
-  String resultMessage = "You have a normal body weight. bv n Good job!";
+  String resultTitle = "";
+  String resultMessage = "";
 
   void incrementAge() {
     if (age < 100) {
@@ -46,11 +47,11 @@ class BmiController extends ChangeNotifier {
     notifyListeners();
   }
 
-  void calculateBmi() {
+  void calculateBmi(BuildContext context) {
     result = weight / ((height / 100) * (height / 100));
     changeResultColor();
-    changeResultTitle();
-    changeResultMessage();
+    changeResultTitle(context);
+    changeResultMessage(context);
     notifyListeners();
   }
 
@@ -69,37 +70,36 @@ class BmiController extends ChangeNotifier {
     }
   }
 
-  void changeResultTitle() {
+  void changeResultTitle(BuildContext context) {
+    final tr = S.of(context);
     if (result < 18.5 && result > 0) {
-      resultTitle = "Underweight";
+      resultTitle = tr.underweight;
     }
     if (result >= 18.5 && result < 24.9) {
-      resultTitle = "Normal";
+      resultTitle = tr.normal;
     }
     if (result >= 24.9 && result < 29.9) {
-      resultTitle = "Overweight";
+      resultTitle = tr.overweight;
     }
     if (result >= 29.9) {
-      resultTitle = "Obese";
+      resultTitle = tr.obese;
     }
     notifyListeners();
   }
 
-  void changeResultMessage() {
+  void changeResultMessage(BuildContext context) {
+    final tr = S.of(context);
     if (result < 18.5 && result > 0) {
-      resultMessage =
-          "You have a lower than normal body weight. Try to exercise more.";
+      resultMessage = tr.underweightMessage;
     }
     if (result >= 18.5 && result < 24.9) {
-      resultMessage = "You have a normal body weight. Good job!";
+      resultMessage = tr.normalMessage;
     }
     if (result >= 24.9 && result < 29.9) {
-      resultMessage =
-          "You have a higher than normal body weight. Try to exercise more.";
+      resultMessage = tr.overweightMessage;
     }
     if (result >= 29.9) {
-      resultMessage =
-          "You have a higher than normal body weight. Try to exercise more.";
+      resultMessage = tr.obeseMessage;
     }
     notifyListeners();
   }

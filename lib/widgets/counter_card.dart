@@ -1,8 +1,8 @@
 import 'package:bmi_calculator/helper/screen_size.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:vertical_weight_slider/vertical_weight_slider.dart';
 import '../constant/color.dart';
+import '../generated/l10n.dart';
 import 'custom_text.dart';
 
 class MyCounter extends StatelessWidget {
@@ -16,15 +16,16 @@ class MyCounter extends StatelessWidget {
   final void Function()? decrementMethod;
   @override
   Widget build(BuildContext context) {
+    final tr = S.of(context);
     return Container(
-      height: ScreenSize.height / 3.4,
+      height: ScreenSize.height / 3.3,
       decoration: BoxDecoration(
           color: MyColors.black, borderRadius: BorderRadius.circular(15.dm)),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          const CustomText(
-            "Age",
+          CustomText(
+            tr.age,
             fontSize: 22,
             fontWeight: FontWeight.w500,
             color: MyColors.green,

@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../constant/string.dart';
+import '../generated/l10n.dart';
 import '../logic/riverpod_model.dart';
 import '../widgets/counter_card.dart';
 import '../widgets/custom_button.dart';
@@ -16,6 +17,7 @@ class OperationScreen extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    final tr = S.of(context);
     return Scaffold(
       backgroundColor: const Color.fromARGB(255, 29, 29, 29),
       body: Padding(
@@ -23,19 +25,19 @@ class OperationScreen extends ConsumerWidget {
         child: Column(
           children: [
             const Spacer(flex: 2),
-            const Row(
+            Row(
               children: [
                 CustomText(
-                  "Welcome",
+                  tr.welcome,
                   fontSize: 15,
                   color: MyColors.green,
                 ),
               ],
             ),
-            const Align(
+            Align(
               alignment: Alignment.centerLeft,
               child: CustomText(
-                "BMI Calculator",
+                tr.title,
                 fontSize: 24,
                 fontWeight: FontWeight.w600,
                 color: MyColors.green,
@@ -49,10 +51,10 @@ class OperationScreen extends ConsumerWidget {
             _buildCounterCard(ref),
             const Spacer(flex: 2),
             CustomButton(
-              title: "Lets Go",
+              title: tr.letsGo,
               onPressed: () {
                 Navigator.pushNamed(context, MyRoutes.resultRoute);
-                ref.read(bmiProvider).calculateBmi();
+                ref.read(bmiProvider).calculateBmi(context);
               },
             ),
             const Spacer(flex: 2),

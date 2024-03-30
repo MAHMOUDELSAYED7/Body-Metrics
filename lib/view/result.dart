@@ -6,6 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../constant/color.dart';
+import '../generated/l10n.dart';
 
 class ResultScreen extends ConsumerWidget {
   const ResultScreen({super.key});
@@ -17,6 +18,7 @@ class ResultScreen extends ConsumerWidget {
     final color = bmi.resultColor;
     final title = bmi.resultTitle;
     final message = bmi.resultMessage;
+    final tr = S.of(context);
     return Scaffold(
       backgroundColor: MyColors.silver,
       body: Padding(
@@ -24,19 +26,21 @@ class ResultScreen extends ConsumerWidget {
         child: Column(
           children: [
             const Spacer(),
-            Align(
-              alignment: Alignment.centerLeft,
-              child: _buildBackButton(context, ref, color),
+            Row(
+              children: [
+                _buildBackButton(context, ref, color),
+              ],
             ),
             SizedBox(height: 25.h),
-            Align(
-              alignment: Alignment.centerLeft,
-              child: CustomText(
-                "Your BMI is",
-                fontSize: 24,
-                fontWeight: FontWeight.w600,
-                color: color,
-              ),
+            Row(
+              children: [
+                CustomText(
+                  tr.yourBmiIs,
+                  fontSize: 24,
+                  fontWeight: FontWeight.w600,
+                  color: color,
+                ),
+              ],
             ),
             const Spacer(flex: 2),
             _buildResultValue(context, ref, result, color),
@@ -47,7 +51,7 @@ class ResultScreen extends ConsumerWidget {
             const Spacer(),
             CustomButton(
               color: color,
-              title: "Find Out More",
+              title:tr.findOutMore,
               onPressed: () => Navigator.pop(context),
             ),
             const Spacer(),
@@ -58,6 +62,7 @@ class ResultScreen extends ConsumerWidget {
   }
 
   Widget _buildBackButton(BuildContext context, WidgetRef ref, Color? color) {
+    final tr = S.of(context);
     return ElevatedButton(
       style: ElevatedButton.styleFrom(
           backgroundColor: color,
@@ -65,8 +70,8 @@ class ResultScreen extends ConsumerWidget {
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(10.dm),
           )),
-      child: const CustomText(
-        'Back',
+      child: CustomText(
+        tr.back,
         color: MyColors.black,
         fontSize: 15,
         fontWeight: FontWeight.w600,
@@ -118,13 +123,14 @@ class ResultScreen extends ConsumerWidget {
 
   Widget _buildResultMessage(BuildContext context, WidgetRef ref, String result,
       String title, String message, Color? color) {
+        final tr = S.of(context);
     return Container(
       width: ScreenSize.width,
       padding: EdgeInsets.all(10.w),
       decoration: BoxDecoration(
           color: MyColors.black, borderRadius: BorderRadius.circular(10.dm)),
       child: CustomText(
-        "Your BMI is $result, you are $title. $message\nThe normal BMI range is 18.5 - 24.9 kg/m2.",
+        "${tr.yourBmiIs} $result. $message\n${tr.normalRanage}",
         color: color,
         fontSize: 18,
       ),

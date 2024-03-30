@@ -2,6 +2,7 @@ import 'package:bmi_calculator/widgets/custom_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../constant/color.dart';
+import '../generated/l10n.dart';
 import '../helper/screen_size.dart';
 
 class MySlider extends StatelessWidget {
@@ -10,14 +11,15 @@ class MySlider extends StatelessWidget {
   final void Function(double)? onChanged;
   @override
   Widget build(BuildContext context) {
+    final tr = S.of(context);
     return Container(
       height: ScreenSize.height / 4.6,
       decoration: BoxDecoration(
           color: MyColors.black, borderRadius: BorderRadius.circular(15.dm)),
       child: Column(
         children: [
-          const CustomText(
-            "Height",
+          CustomText(
+            tr.height,
             fontSize: 24,
             fontWeight: FontWeight.w500,
             color: MyColors.green,
@@ -40,8 +42,8 @@ class MySlider extends StatelessWidget {
                   fontWeight: FontWeight.w600,
                   color: MyColors.black,
                 ),
-                const CustomText(
-                  "cm",
+                 CustomText(
+                  tr.cm,
                   color: MyColors.black,
                   fontWeight: FontWeight.w600,
                 ),

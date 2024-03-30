@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:vertical_weight_slider/vertical_weight_slider.dart';
 
 import '../constant/color.dart';
+import '../generated/l10n.dart';
 import '../helper/screen_size.dart';
 import 'custom_text.dart';
 
@@ -33,14 +34,15 @@ class WeightSliderState extends State<WeightSlider> {
 
   @override
   Widget build(BuildContext context) {
+    final tr = S.of(context);
     return Container(
-      height: ScreenSize.height / 3.4,
+      height: ScreenSize.height / 3.3,
       decoration: BoxDecoration(
           color: MyColors.black, borderRadius: BorderRadius.circular(15.dm)),
       child: Column(
         children: [
-          const CustomText(
-            "Weight",
+          CustomText(
+            tr.weight,
             fontSize: 22,
             fontWeight: FontWeight.w500,
             color: MyColors.green,
@@ -64,8 +66,8 @@ class WeightSliderState extends State<WeightSlider> {
                     fontWeight: FontWeight.w600,
                   ),
                   SizedBox(width: 5.w),
-                  const CustomText(
-                    "kg",
+                  CustomText(
+                    tr.kg,
                     color: MyColors.black,
                     fontSize: 14,
                     fontWeight: FontWeight.w600,
