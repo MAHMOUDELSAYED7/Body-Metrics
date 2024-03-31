@@ -48,6 +48,6 @@ class MessageLookup extends MessageLookupByLibrary {
             "لديك وزن أقل من متوسطك، حاول تموع مزيد من التموع."),
         "weight": MessageLookupByLibrary.simpleMessage("وزنك"),
         "welcome": MessageLookupByLibrary.simpleMessage("مرحبا"),
-        "yourBmiIs": MessageLookupByLibrary.simpleMessage("البيمي الخاص بك هو")
+        "yourBmiIs": MessageLookupByLibrary.simpleMessage("BMI الخاص بك هو")
       };
 }

@@ -32,6 +32,15 @@ class OperationScreen extends ConsumerWidget {
                   fontSize: 15,
                   color: MyColors.green,
                 ),
+                const Spacer(),
+                IconButton(
+                    onPressed: () =>
+                        Navigator.pushNamed(context, MyRoutes.settingsRoute),
+                    icon: Icon(
+                      Icons.settings,
+                      size: 25.spMax,
+                      color: MyColors.green,
+                    ))
               ],
             ),
             Align(
@@ -53,7 +62,10 @@ class OperationScreen extends ConsumerWidget {
             CustomButton(
               title: tr.letsGo,
               onPressed: () {
-                Navigator.pushNamed(context, MyRoutes.resultRoute);
+                Navigator.pushNamed(
+                  context,
+                  MyRoutes.resultRoute,
+                );
                 ref.read(bmiProvider).calculateBmi(context);
               },
             ),

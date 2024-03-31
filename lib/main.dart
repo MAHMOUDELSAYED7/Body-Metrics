@@ -24,7 +24,7 @@ class MyApp extends StatelessWidget {
       builder: (_, child) {
         return MaterialApp(
           title: 'BMI Calculator',
-          locale: Locale('ar'),
+          locale: const Locale('en', 'ar'),
           localizationsDelegates: const [
             S.delegate,
             GlobalMaterialLocalizations.delegate,

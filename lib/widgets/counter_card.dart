@@ -58,7 +58,7 @@ class MyCounter extends StatelessWidget {
                       child: Icon(
                         Icons.add,
                         size: 40.r,
-                        color: MyColors.black,
+                        color: Colors.red.shade900,
                       )),
                   FloatingActionButton(
                       heroTag: null,
@@ -68,7 +68,7 @@ class MyCounter extends StatelessWidget {
                       child: Icon(
                         Icons.remove,
                         size: 40.r,
-                        color: MyColors.black,
+                        color: Colors.red.shade900,
                       )),
                 ]),
           ),

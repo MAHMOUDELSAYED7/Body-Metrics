@@ -1,6 +1,7 @@
 import 'package:bmi_calculator/helper/screen_size.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:intl/intl.dart';
 import 'package:slide_switcher/slide_switcher.dart';
 import '../constant/color.dart';
 import '../generated/l10n.dart';
@@ -32,28 +33,42 @@ class GenderSlider extends StatelessWidget {
   Widget buildGenderNameAndicon(
       String title, IconData iconData, int switcherIndex1, context) {
     final tr = S.of(context);
+    String lang = Intl.getCurrentLocale();
+
     return Row(
       children: [
         const Spacer(flex: 2),
         Icon(
           iconData,
           size: 40.spMax,
-          color: title == tr.male && switcherIndex1 == 0 
-              ? MyColors.black
-              : switcherIndex1 == 1 && title == tr.female
+          color: lang == "en"
+              ? title == tr.male && switcherIndex1 == 0
                   ? MyColors.black
-                  : MyColors.green,
+                  : switcherIndex1 == 1 && title == tr.female
+                      ? MyColors.black
+                      : MyColors.green
+              : title == tr.male && switcherIndex1 == 0
+                  ? MyColors.green
+                  : switcherIndex1 == 1 && title == tr.female
+                      ? MyColors.green
+                      : MyColors.black,
         ),
         const Spacer(),
         CustomText(
           title,
           fontSize: 18,
           fontWeight: FontWeight.w500,
-          color: title == tr.male && switcherIndex1 == 0
-              ? MyColors.black
-              : switcherIndex1 == 1 && title == tr.female
+          color: lang == "en"
+              ? title == tr.male && switcherIndex1 == 0
                   ? MyColors.black
-                  : MyColors.green,
+                  : switcherIndex1 == 1 && title == tr.female
+                      ? MyColors.black
+                      : MyColors.green
+              : title == tr.male && switcherIndex1 == 0
+                  ? MyColors.green
+                  : switcherIndex1 == 1 && title == tr.female
+                      ? MyColors.green
+                      : MyColors.black,
         ),
         const Spacer(
           flex: 3,

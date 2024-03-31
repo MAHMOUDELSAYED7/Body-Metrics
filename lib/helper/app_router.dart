@@ -1,3 +1,4 @@
+import 'package:bmi_calculator/view/setting.dart';
 import 'package:flutter/material.dart';
 
 import '../constant/string.dart';
@@ -19,6 +20,19 @@ class AppRouter {
         return PageRouteBuilder(
           pageBuilder: (context, animation, secondaryAnimation) =>
               const ResultScreen(),
+          transitionDuration: const Duration(milliseconds: 200),
+          transitionsBuilder: (context, animation, secondaryAnimation, child) {
+            return FadeTransition(
+              opacity: animation,
+              child: child,
+            );
+          },
+        );
+
+      case MyRoutes.settingsRoute:
+        return PageRouteBuilder(
+          pageBuilder: (context, animation, secondaryAnimation) =>
+              const SettingsScreen(),
           transitionDuration: const Duration(milliseconds: 200),
           transitionsBuilder: (context, animation, secondaryAnimation, child) {
             return FadeTransition(

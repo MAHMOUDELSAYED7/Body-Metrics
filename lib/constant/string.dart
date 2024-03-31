@@ -2,6 +2,7 @@ class MyRoutes {
   static const initRoute = '/';
   static const operationRoute = '/operation';
   static const resultRoute = '/result';
+  static const settingsRoute = '/settings';
 }
 
 class MyFontFamily {
