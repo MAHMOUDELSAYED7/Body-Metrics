@@ -17,8 +17,6 @@ class BmiController extends ChangeNotifier {
   Color? resultColor = MyColors.green;
   String resultTitle = "";
   String resultMessage = "";
-  String locale = "en";
-
   void incrementAge() {
     if (age < 100) {
       age++;
@@ -102,17 +100,6 @@ class BmiController extends ChangeNotifier {
     if (result >= 29.9) {
       resultMessage = tr.obeseMessage;
     }
-    notifyListeners();
-  }
-
-  void onLocalizationChanged(String? value) {
-    locale = value!;
-    if (locale == "en") {
-      S.load(const Locale('en'));
-    } else {
-      S.load(const Locale('ar'));
-    }
-
     notifyListeners();
   }
 }

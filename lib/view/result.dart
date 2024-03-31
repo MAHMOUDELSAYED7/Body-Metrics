@@ -1,5 +1,5 @@
 import 'package:bmi_calculator/helper/screen_size.dart';
-import 'package:bmi_calculator/logic/riverpod_model.dart';
+import 'package:bmi_calculator/logic/bmi_provider.dart';
 import 'package:bmi_calculator/widgets/custom_button.dart';
 import 'package:bmi_calculator/widgets/custom_text.dart';
 import 'package:flutter/material.dart';

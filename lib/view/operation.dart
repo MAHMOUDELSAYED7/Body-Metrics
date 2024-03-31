@@ -5,7 +5,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../constant/string.dart';
 import '../generated/l10n.dart';
-import '../logic/riverpod_model.dart';
+import '../logic/bmi_provider.dart';
 import '../widgets/counter_card.dart';
 import '../widgets/custom_button.dart';
 import '../widgets/custom_slider.dart';

@@ -1,12 +1,10 @@
-import 'package:bmi_calculator/logic/riverpod_model.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
 import '../constant/color.dart';
 import '../generated/l10n.dart';
 import '../helper/screen_size.dart';
+import '../logic/localization_provider.dart';
 import '../widgets/custom_text.dart';
 
 class SettingsScreen extends ConsumerWidget {
@@ -53,11 +51,11 @@ class SettingsScreen extends ConsumerWidget {
           const Spacer(flex: 8),
           DropdownButton(
             iconEnabledColor: MyColors.green,
-            style: TextStyle(color: MyColors.green),
+            style: const TextStyle(color: MyColors.green),
             alignment: Alignment.center,
             dropdownColor: MyColors.black,
             icon: const Icon(Icons.arrow_drop_down),
-            value: ref.watch(bmiProvider).locale,
+            value: ref.watch(localeProvider).lang,
             items: const [
               DropdownMenuItem(
                 alignment: Alignment.center,
@@ -71,7 +69,7 @@ class SettingsScreen extends ConsumerWidget {
               ),
             ],
             onChanged: (value) =>
-                ref.read(bmiProvider).onLocalizationChanged(value),
+                ref.read(localeProvider).onLocalizationChanged(value),
           ),
           const Spacer(),
         ],
