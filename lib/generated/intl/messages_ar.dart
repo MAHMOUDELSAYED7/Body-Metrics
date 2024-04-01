@@ -23,10 +23,9 @@ class MessageLookup extends MessageLookupByLibrary {
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "age": MessageLookupByLibrary.simpleMessage("عمرك"),
-        "arabic": MessageLookupByLibrary.simpleMessage("العربية"),
         "back": MessageLookupByLibrary.simpleMessage("تراجع"),
+        "changeLanguage": MessageLookupByLibrary.simpleMessage("تغير اللغة"),
         "cm": MessageLookupByLibrary.simpleMessage("سم"),
-        "english": MessageLookupByLibrary.simpleMessage("English"),
         "female": MessageLookupByLibrary.simpleMessage("أنثى"),
         "findOutMore": MessageLookupByLibrary.simpleMessage("اكتشف المزيد"),
         "height": MessageLookupByLibrary.simpleMessage("ارتفاعك"),
@@ -41,14 +40,14 @@ class MessageLookup extends MessageLookupByLibrary {
             "يجب ان يكون الوزن الطبيعى بين 18.5 و 25"),
         "obese": MessageLookupByLibrary.simpleMessage("عالى جدا"),
         "obeseMessage": MessageLookupByLibrary.simpleMessage(
-            "لديك وزن أعلى بكثير من متوسطك، حاول تموع مزيد من التموع."),
+            "لديك وزن أعلى بكثير من متوسطك، حاول ان تتمرن مزيد من التمرين."),
         "overweight": MessageLookupByLibrary.simpleMessage("عالى"),
         "overweightMessage": MessageLookupByLibrary.simpleMessage(
-            "لديك وزن أعلى من متوسطك، حاول تموع مزيد من التموع."),
+            "لديك وزن أعلى من متوسطك، ان تتمرن مزيد من التمرين."),
         "title": MessageLookupByLibrary.simpleMessage("BMI Calculator"),
         "underweight": MessageLookupByLibrary.simpleMessage("منخفض"),
         "underweightMessage": MessageLookupByLibrary.simpleMessage(
-            "لديك وزن أقل من متوسطك، حاول تموع مزيد من التموع."),
+            "لديك وزن أقل من متوسطك، حاول ان تتمرن مزيد من التمرين."),
         "weight": MessageLookupByLibrary.simpleMessage("وزنك"),
         "welcome": MessageLookupByLibrary.simpleMessage("مرحبا"),
         "yourBmiIs": MessageLookupByLibrary.simpleMessage("BMI الخاص بك هو")

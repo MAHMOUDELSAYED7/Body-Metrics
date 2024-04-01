@@ -27,7 +27,7 @@ class CustomText extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final screenWidth = MediaQuery.of(context).size.width;
-    final scaleFactor = screenWidth / 400;
+    final scaleFactor = screenWidth * 0.0025;
     final adjustedFontSize = fontSize * scaleFactor;
 
     return Text(

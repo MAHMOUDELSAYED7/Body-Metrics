@@ -20,8 +20,7 @@
     "obeseMessage": "You have a higher than normal body weight. Try to exercise more.",
     "underweightMessage": "You have a lower than normal body weight. Try to exercise more.",
     "overweightMessage": "You have a higher than normal body weight. Try to exercise more.",
-    "normalRanage":"The normal BMI range is 18.5 - 24.9 kg/m2.",
+    "normalRanage": "The normal BMI range is 18.5 - 24.9 kg/m2.",
     "language": "Language",
-    "english": "English",
-    "arabic": "العربية"
+    "changeLanguage": "Change Language"
 }

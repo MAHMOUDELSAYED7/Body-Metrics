@@ -33,6 +33,7 @@ class SettingsScreen extends ConsumerWidget {
   }
 
   Widget _buildChangeLocale(BuildContext context, WidgetRef ref) {
+    final tr = S.of(context);
     return Container(
       height: ScreenSize.height * 0.075,
       width: ScreenSize.width,
@@ -44,12 +45,17 @@ class SettingsScreen extends ConsumerWidget {
       child: Row(
         children: [
           const Spacer(),
-          const CustomText(
-            "Language",
+          CustomText(
+            tr.changeLanguage,
             color: MyColors.green,
           ),
           const Spacer(flex: 8),
           DropdownButton(
+            selectedItemBuilder: (context) => [
+              DropdownMenuItem(
+                child: CustomText(tr.language, color: MyColors.green),
+              ),
+            ],
             iconEnabledColor: MyColors.green,
             style: const TextStyle(color: MyColors.green),
             alignment: Alignment.center,

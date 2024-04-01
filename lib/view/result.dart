@@ -51,7 +51,7 @@ class ResultScreen extends ConsumerWidget {
             const Spacer(),
             CustomButton(
               color: color,
-              title:tr.findOutMore,
+              title: tr.findOutMore,
               onPressed: () => Navigator.pop(context),
             ),
             const Spacer(),
@@ -83,6 +83,7 @@ class ResultScreen extends ConsumerWidget {
   Widget _buildResultValue(
       BuildContext context, WidgetRef ref, String result, Color? color) {
     return Container(
+      padding: EdgeInsets.all(50.sp),
       alignment: Alignment.center,
       decoration: BoxDecoration(
         color: MyColors.black,
@@ -92,7 +93,6 @@ class ResultScreen extends ConsumerWidget {
           width: 8.w,
         ),
       ),
-      height: ScreenSize.width / 2,
       child: CustomText(
         result,
         color: color,
@@ -123,7 +123,7 @@ class ResultScreen extends ConsumerWidget {
 
   Widget _buildResultMessage(BuildContext context, WidgetRef ref, String result,
       String title, String message, Color? color) {
-        final tr = S.of(context);
+    final tr = S.of(context);
     return Container(
       width: ScreenSize.width,
       padding: EdgeInsets.all(10.w),

@@ -13,7 +13,7 @@ class MySlider extends StatelessWidget {
   Widget build(BuildContext context) {
     final tr = S.of(context);
     return Container(
-      height: ScreenSize.height / 4.6,
+      height: ScreenSize.height / 4.2,
       decoration: BoxDecoration(
           color: MyColors.black, borderRadius: BorderRadius.circular(15.dm)),
       child: Column(
@@ -42,7 +42,7 @@ class MySlider extends StatelessWidget {
                   fontWeight: FontWeight.w600,
                   color: MyColors.black,
                 ),
-                 CustomText(
+                CustomText(
                   tr.cm,
                   color: MyColors.black,
                   fontWeight: FontWeight.w600,

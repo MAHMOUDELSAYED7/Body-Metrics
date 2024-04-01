@@ -280,21 +280,11 @@ class S {
     );
   }
 
-  /// `English`
-  String get english {
+  /// `Change Language`
+  String get changeLanguage {
     return Intl.message(
-      'English',
-      name: 'english',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `العربية`
-  String get arabic {
-    return Intl.message(
-      'العربية',
-      name: 'arabic',
+      'Change Language',
+      name: 'changeLanguage',
       desc: '',
       args: [],
     );
