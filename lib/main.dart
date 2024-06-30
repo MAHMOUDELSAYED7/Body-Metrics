@@ -1,7 +1,8 @@
 import 'package:bmi_calculator/constant/string.dart';
 import 'package:bmi_calculator/helper/app_router.dart';
-import 'package:bmi_calculator/helper/chache.dart';
+import 'package:bmi_calculator/helper/cache.dart';
 import 'package:bmi_calculator/helper/screen_size.dart';
+import 'package:bmi_calculator/logic/font_family_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -27,7 +28,18 @@ class MyApp extends ConsumerWidget {
       splitScreenMode: true,
       builder: (_, child) {
         return MaterialApp(
+          builder: (context, widget) {
+            final mediaQueryData = MediaQuery.of(context);
+            final scaledMediaQueryData = mediaQueryData.copyWith(
+              textScaler: TextScaler.noScaling,
+            );
+            return MediaQuery(
+              data: scaledMediaQueryData,
+              child: widget!,
+            );
+          },
           title: 'BMI Calculator',
+          theme: ThemeData(fontFamily: ref.watch(fontProvider).fontFamily),
           locale: ref.watch(localeProvider).locale,
           localizationsDelegates: const [
             S.delegate,

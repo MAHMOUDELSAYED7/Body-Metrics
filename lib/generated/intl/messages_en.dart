@@ -51,6 +51,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "You have a lower than normal body weight. Try to exercise more."),
         "weight": MessageLookupByLibrary.simpleMessage("Weight"),
         "welcome": MessageLookupByLibrary.simpleMessage("Welcome"),
-        "yourBmiIs": MessageLookupByLibrary.simpleMessage("Your BMI is")
+        "yourBmiIs": MessageLookupByLibrary.simpleMessage("Your BMI is"),
+        "changeFontFamily":
+            MessageLookupByLibrary.simpleMessage("Change Font Style")
       };
 }

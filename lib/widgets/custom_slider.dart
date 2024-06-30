@@ -15,7 +15,7 @@ class MySlider extends StatelessWidget {
     return Container(
       height: ScreenSize.height / 4.2,
       decoration: BoxDecoration(
-          color: MyColors.black, borderRadius: BorderRadius.circular(15.dm)),
+          color: MyColors.black, borderRadius: BorderRadius.circular(15.r)),
       child: Column(
         children: [
           CustomText(
@@ -30,7 +30,7 @@ class MySlider extends StatelessWidget {
             alignment: Alignment.center,
             decoration: BoxDecoration(
                 color: MyColors.green,
-                borderRadius: BorderRadius.circular(10.dm)),
+                borderRadius: BorderRadius.circular(10.r)),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.end,
@@ -55,7 +55,7 @@ class MySlider extends StatelessWidget {
           SliderTheme(
             data: SliderThemeData(
               trackHeight: 10.w,
-              thumbShape: RoundSliderThumbShape(enabledThumbRadius: 12.dm),
+              thumbShape: RoundSliderThumbShape(enabledThumbRadius: 12.r),
             ),
             child: Slider(
               inactiveColor: MyColors.silver,

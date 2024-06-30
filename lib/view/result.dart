@@ -131,6 +131,7 @@ class ResultScreen extends ConsumerWidget {
           color: MyColors.black, borderRadius: BorderRadius.circular(10.dm)),
       child: CustomText(
         "${tr.yourBmiIs} $result. $message\n${tr.normalRanage}",
+        textAlign: TextAlign.center,
         color: color,
         fontSize: 18,
       ),

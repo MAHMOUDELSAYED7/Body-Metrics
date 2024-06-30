@@ -15,10 +15,10 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     super.initState();
-    goToOperationScreen();
+    _goToOperationScreen();
   }
 
-  goToOperationScreen() {
+  _goToOperationScreen() {
     Future.delayed(const Duration(seconds: 1), () {
       Navigator.pushReplacementNamed(context, MyRoutes.operationRoute);
     });
@@ -28,12 +28,7 @@ class _SplashScreenState extends State<SplashScreen> {
   Widget build(BuildContext context) {
     return const Scaffold(
       backgroundColor: MyColors.black,
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          MyLoadingIndicator(),
-        ],
-      ),
+      body: MyLoadingIndicator(),
     );
   }
 }

@@ -289,6 +289,15 @@ class S {
       args: [],
     );
   }
+  /// `Change Language`
+  String get changeFontFamily {
+    return Intl.message(
+      'Change Font Family',
+      name: 'changeFontFamily',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

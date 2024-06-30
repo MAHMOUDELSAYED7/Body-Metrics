@@ -22,5 +22,6 @@
     "overweightMessage": "لديك وزن أعلى من متوسطك، ان تتمرن مزيد من التمرين.",
     "normalRanage": "يجب ان يكون الوزن الطبيعى بين 18.5 و 25",
     "language": "اللغة",
-    "changeLanguage": "تغير اللغة"
+    "changeLanguage": "تغير اللغة",
+    "changeFontFamily": "تغيرر نوع الخط"
 }

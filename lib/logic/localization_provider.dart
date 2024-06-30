@@ -1,4 +1,4 @@
-import 'package:bmi_calculator/helper/chache.dart';
+import 'package:bmi_calculator/helper/cache.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -9,18 +9,26 @@ final localeProvider = ChangeNotifierProvider<LocaleController>((ref) {
 });
 
 class LocaleController extends ChangeNotifier {
+  LocaleController() {
+    _initializeLang();
+  }
+
   String lang = "en";
 
-  Locale get locale => Locale(CacheData.getdata(key: "locale") ?? "en");
-  onLocalizationChanged(String? value) async {
-    lang = value!;
-    await CacheData.setData(key: "locale", value: lang);
-    if (lang == "en") {
-      S.load(const Locale('en'));
-    } else {
-      S.load(const Locale('ar'));
-    }
+  Locale get locale => Locale(lang);
 
+  Future<void> _initializeLang() async {
+    lang = await CacheData.getdata(key: "locale") ?? "en";
+    notifyListeners();
+  }
+
+  Future<void> onLocalizationChanged(String? value) async {
+    if (value == null || value == lang) return;
+
+    lang = value;
+    await CacheData.setData(key: "locale", value: lang);
+
+    await S.load(Locale(lang));
     notifyListeners();
   }
 }

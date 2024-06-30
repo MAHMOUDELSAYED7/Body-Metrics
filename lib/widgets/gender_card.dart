@@ -1,79 +1,85 @@
 import 'package:bmi_calculator/helper/screen_size.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:intl/intl.dart';
-import 'package:slide_switcher/slide_switcher.dart';
 import '../constant/color.dart';
 import '../generated/l10n.dart';
 import 'custom_text.dart';
 
-class GenderSlider extends StatelessWidget {
-  const GenderSlider(
-      {super.key, required this.switcherIndex1, required this.onSelect});
-  final int switcherIndex1;
+class GenderCard extends StatefulWidget {
+  const GenderCard({super.key, required this.onSelect});
   final void Function(int) onSelect;
+
+  @override
+  State<GenderCard> createState() => _GenderCardState();
+}
+
+class _GenderCardState extends State<GenderCard> {
+  bool isMaleSelected = true;
+
+  void _selectGender(bool isMale) {
+    setState(() {
+      isMaleSelected = isMale;
+    });
+    widget.onSelect(isMale ? 0 : 1);
+  }
+
   @override
   Widget build(BuildContext context) {
     final tr = S.of(context);
-    return SlideSwitcher(
-      containerColor: MyColors.black,
-      slidersColors: const [MyColors.green],
-      containerBorderRadius: 10.dm,
-      onSelect: onSelect,
-      containerHeight: ScreenSize.width / 6,
-      containerWight: ScreenSize.width - 40.w,
-      children: [
-        buildGenderNameAndicon(tr.male, Icons.male, switcherIndex1, context),
-        buildGenderNameAndicon(
-            tr.female, Icons.female, switcherIndex1, context),
-      ],
+    return Container(
+      height: ScreenSize.width / 6,
+      decoration: BoxDecoration(
+          color: MyColors.black, borderRadius: BorderRadius.circular(12.r)),
+      child: Row(
+        children: [
+          _genderCard(tr.male, Icons.male, true, context),
+          SizedBox(width: 10.w),
+          _genderCard(tr.female, Icons.female, false, context),
+        ],
+      ),
     );
   }
 
-  Widget buildGenderNameAndicon(
-      String title, IconData iconData, int switcherIndex1, context) {
-    final tr = S.of(context);
-    String lang = Intl.getCurrentLocale();
+  Widget _genderCard(String title, IconData iconData, bool isMale, context) {
+    bool isSelected =
+        (isMale && isMaleSelected) || (!isMale && !isMaleSelected);
 
-    return Row(
-      children: [
-        const Spacer(flex: 2),
-        Icon(
-          iconData,
-          size: 40.spMax,
-          color: lang == "en"
-              ? title == tr.male && switcherIndex1 == 0
-                  ? MyColors.black
-                  : switcherIndex1 == 1 && title == tr.female
-                      ? MyColors.black
-                      : MyColors.green
-              : title == tr.male && switcherIndex1 == 0
-                  ? MyColors.green
-                  : switcherIndex1 == 1 && title == tr.female
-                      ? MyColors.green
-                      : MyColors.black,
+    return Expanded(
+      child: InkWell(
+        overlayColor: const WidgetStatePropertyAll(Colors.transparent),
+        onTap: () {
+          _selectGender(isMale);
+        },
+        child: AnimatedContainer(
+          duration: const Duration(milliseconds: 150),
+          decoration: BoxDecoration(
+            color: isSelected ? MyColors.green : null,
+            borderRadius: BorderRadius.circular(15.r),
+          ),
+          alignment: Alignment.center,
+          height: ScreenSize.width / 6,
+          child: Row(
+            children: [
+              const Spacer(flex: 2),
+              Icon(
+                iconData,
+                size: 40.spMax,
+                color: isSelected ? Colors.black : MyColors.green,
+              ),
+              const Spacer(),
+              CustomText(
+                title,
+                fontSize: 18,
+                fontWeight: FontWeight.w500,
+                color: isSelected ? Colors.black : MyColors.green,
+              ),
+              const Spacer(
+                flex: 3,
+              ),
+            ],
+          ),
         ),
-        const Spacer(),
-        CustomText(
-          title,
-          fontSize: 18,
-          fontWeight: FontWeight.w500,
-          color: lang == "en"
-              ? title == tr.male && switcherIndex1 == 0
-                  ? MyColors.black
-                  : switcherIndex1 == 1 && title == tr.female
-                      ? MyColors.black
-                      : MyColors.green
-              : title == tr.male && switcherIndex1 == 0
-                  ? MyColors.green
-                  : switcherIndex1 == 1 && title == tr.female
-                      ? MyColors.green
-                      : MyColors.black,
-        ),
-        const Spacer(
-          flex: 3,
-        ),
-      ],
+      ),
     );
   }
 }

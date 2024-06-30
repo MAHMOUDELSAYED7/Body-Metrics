@@ -80,8 +80,7 @@ class OperationScreen extends ConsumerWidget {
     return Row(
       children: [
         Expanded(
-          child: GenderSlider(
-            switcherIndex1: ref.watch(bmiProvider).switcherIndex1,
+          child: GenderCard(
             onSelect: ref.read(bmiProvider).onGenderSelect,
           ),
         ),
