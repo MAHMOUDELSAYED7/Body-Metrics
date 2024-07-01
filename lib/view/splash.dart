@@ -1,4 +1,4 @@
-import 'package:bmi_calculator/widgets/loading_indicator.dart';
+import 'package:body_metrics/widgets/loading_indicator.dart';
 import 'package:flutter/material.dart';
 
 import '../constant/color.dart';

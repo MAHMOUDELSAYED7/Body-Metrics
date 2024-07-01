@@ -1,8 +1,8 @@
-import 'package:bmi_calculator/constant/string.dart';
-import 'package:bmi_calculator/helper/app_router.dart';
-import 'package:bmi_calculator/helper/cache.dart';
-import 'package:bmi_calculator/helper/screen_size.dart';
-import 'package:bmi_calculator/logic/font_family_provider.dart';
+import 'package:body_metrics/constant/string.dart';
+import 'package:body_metrics/helper/app_router.dart';
+import 'package:body_metrics/helper/cache.dart';
+import 'package:body_metrics/helper/screen_size.dart';
+import 'package:body_metrics/logic/font_family_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';

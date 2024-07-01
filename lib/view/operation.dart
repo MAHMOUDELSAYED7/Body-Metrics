@@ -1,5 +1,5 @@
-import 'package:bmi_calculator/constant/color.dart';
-import 'package:bmi_calculator/widgets/custom_text.dart';
+import 'package:body_metrics/constant/color.dart';
+import 'package:body_metrics/widgets/custom_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';

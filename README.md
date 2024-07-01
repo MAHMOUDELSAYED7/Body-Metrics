@@ -1,4 +1,4 @@
-# BodyMetrics BMI Calculator
+# Body Metrics
 BodyMetrics is a user-friendly Body Mass Index (BMI) calculator application built using Flutter and managed with Riverpod for state management. The app provides an intuitive interface for users to calculate their BMI and understand their health status based on the BMI value. With support for multiple languages and customizable text styles, BodyMetrics ensures a personalized experience for every user.
 
 ## Features
@@ -85,15 +85,11 @@ By following these steps, you'll have the BodyMetrics app and running on your de
 
 ## Dependencies
 
-- `flutter_riverpod:` State management using Riverpod.
-
-- `flutter_screenutil:` Responsive UI design utility.
-
-- `intl:` Internationalization and localization support.
-
-- `shared_preferences:` Persistent local storage management.
-
-- `vertical_weight_slider:` Vertical slider widget for weight.
+- **flutter_riverpod:** State management using Riverpod.
+- **flutter_screenutil:** Responsive UI design utility.
+- **intl:** Internationalization and localization support.
+- **shared_preferences:** Persistent local storage management.
+- **vertical_weight_slider:** Vertical slider widget for weight.
 
 ## Usage
 ### Calculate (BMI):

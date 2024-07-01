@@ -1,4 +1,4 @@
-import 'package:bmi_calculator/helper/cache.dart';
+import 'package:body_metrics/helper/cache.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
