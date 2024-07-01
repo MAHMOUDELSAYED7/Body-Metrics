@@ -1,11 +1,11 @@
 # Body Metrics
-BodyMetrics is a user-friendly Body Mass Index (BMI) calculator application built using Flutter and managed with Riverpod for state management. The app provides an intuitive interface for users to calculate their BMI and understand their health status based on the BMI value. With support for multiple languages and customizable text styles, BodyMetrics ensures a personalized experience for every user.
+Body Metrics is a user-friendly Body Mass Index (BMI) calculator application built using Flutter and managed with Riverpod for state management. The app provides an intuitive interface for users to calculate their BMI and understand their health status based on the BMI value. With support for multiple languages and customizable text styles, Body Metrics ensures a personalized experience for every user.
 
 ## Features
 
 ###  BMI Calculation
 
-BodyMetrics calculates your Body Mass Index (BMI) based on your weight and height. BMI is a simple index of weight-for-height that is commonly used to classify underweight, overweight, and obesity in adults. The app provides the following functionalities:
+Body Metrics calculates your Body Mass Index (BMI) based on your weight and height. BMI is a simple index of weight-for-height that is commonly used to classify underweight, overweight, and obesity in adults. The app provides the following functionalities:
 
 - Input fields for `weight(kilograms)` and `height(centimeters)`.
 - Instant calculation of BMI upon entering the required values.
@@ -22,7 +22,7 @@ BodyMetrics supports `two languages`:
 Users can easily switch between languages from the settings menu, making the app accessible to a broader audience.
 
 ### Customizable Text Styles/Font Families
-To enhance user experience, BodyMetrics `offers three different font families`:
+To enhance user experience, Body Metrics `offers three different font families`:
 
 - `Poppins:` A modern and clean font family.
 - `GermaniaOne:` A unique and eye-catching font family.
@@ -48,7 +48,7 @@ To get started with BodyMetrics, follow these steps:
 `Step 1:` Clone the Repository
 First, you'll need to clone the repository from GitHub. Open your terminal and run the following command:
 ```
-https://github.com/MAHMOUDELSAYED69/BMI-Calculator
+https://github.com/MAHMOUDELSAYED69/Body-Metrics.git
 ```
 Replace <repository-url> with the actual URL of your repository if it was changed.
 
@@ -81,7 +81,7 @@ flutter doctor
 ```
 This command checks your environment and displays a report of the status of your Flutter installation, dependencies, and connected devices.
 
-By following these steps, you'll have the BodyMetrics app and running on your device. If you encounter any issues during installation, please refer to the Flutter documentation.
+By following these steps, you'll have the Body Metrics app and running on your device. If you encounter any issues during installation, please refer to the Flutter documentation.
 
 ## Dependencies
 
