@@ -3,7 +3,7 @@ Body Metrics is a user-friendly Body Mass Index (BMI) calculator application bui
 
 ## Features
 
-###  BMI Calculation
+### BMI Calculation
 
 Body Metrics calculates your Body Mass Index (BMI) based on your weight and height. BMI is a simple index of weight-for-height that is commonly used to classify underweight, overweight, and obesity in adults. The app provides the following functionalities:
 
@@ -16,18 +16,18 @@ The app is designed with a focus on simplicity and ease of use. The clean layout
 ### Multi-Language Support
 BodyMetrics supports `two languages`:
 
-- `Arabic`
-- `English`
+- **`Arabic`**
+- **`English`**
 
 Users can easily switch between languages from the settings menu, making the app accessible to a broader audience.
 
 ### Customizable Text Styles/Font Families
 To enhance user experience, Body Metrics `offers three different font families`:
 
-- `Poppins:` A modern and clean font family.
-- `GermaniaOne:` A unique and eye-catching font family.
-- `MetalMania:` A bold and dynamic font family.
-- 
+- **`Poppins:`** A modern and clean font family.
+- **`GermaniaOne:`** A unique and eye-catching font family.
+- **`MetalMania:`** A bold and dynamic font family.
+  
 Users can select their preferred text style from the settings menu.
 
 ## Screenshots
@@ -45,24 +45,24 @@ Users can select their preferred text style from the settings menu.
 ## Getting Started
 To get started with BodyMetrics, follow these steps:
 
-`Step 1:` Clone the Repository
+**`Step 1:`** Clone the Repository
 First, you'll need to clone the repository from GitHub. Open your terminal and run the following command:
 ```
 https://github.com/MAHMOUDELSAYED69/Body-Metrics.git
 ```
 Replace <repository-url> with the actual URL of your repository if it was changed.
 
-`Step 2:` Install Dependencies
+**`Step 2:`** Install Dependencies
 After navigating to the project directory, you need to install all the necessary dependencies. Run:
 ```
 flutter pub get
 ```
 This command fetches all the dependencies listed in the `pubspec.yaml` file.
 
-`Step 3:` Configure the App
+**`Step 3:`** Configure the App
 Ensure all necessary configurations are done. This includes adding your assets and setting up environment variables if needed. Verify that your `pubspec.yaml` file includes all required `assets` and `fonts`.
 
-`Step 4:` Run the Application
+**`Step 4:`** Run the Application
 Finally, run the application on your desired device using the following command:
 `
 ```
@@ -71,7 +71,7 @@ flutter run
 This command compiles your Flutter app and deploys it to the connected device or simulator.
 
 Additional Tips
-`Updating Dependencies:` If there are any updates to the dependencies, you can update them using:
+**`Updating Dependencies:`** If there are any updates to the dependencies, you can update them using:
 ```
 flutter pub upgrade --major-versions
 ```
@@ -85,11 +85,11 @@ By following these steps, you'll have the Body Metrics app and running on your d
 
 ## Dependencies
 
-- **flutter_riverpod:** State management using Riverpod.
-- **flutter_screenutil:** Responsive UI design utility.
-- **intl:** Internationalization and localization support.
-- **shared_preferences:** Persistent local storage management.
-- **vertical_weight_slider:** Vertical slider widget for weight.
+- **`flutter_riverpod:`** State management using Riverpod.
+- **`flutter_screenutil:`** Responsive UI design utility.
+- **`intl:`** Internationalization and localization support.
+- **`shared_preferences:`** Persistent local storage management.
+- **`vertical_weight_slider:`** Vertical slider widget for weight.
 
 ## Usage
 ### Calculate (BMI):
