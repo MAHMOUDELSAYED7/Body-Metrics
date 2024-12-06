@@ -48,7 +48,7 @@ To get started with BodyMetrics, follow these steps:
 **`Step 1:`** Clone the Repository
 First, you'll need to clone the repository from GitHub. Open your terminal and run the following command:
 ```
-https://github.com/MAHMOUDELSAYED69/Body-Metrics.git
+https://github.com/MAHMOUDELSAYED7/Body-Metrics.git
 ```
 Replace <repository-url> with the actual URL of your repository if it was changed.
 
@@ -121,4 +121,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Contact
 
-For any questions or feedback, please reach out via email: [gcfjxvkj@gmail.com](gcfjxvkj@gmail.com)
+For any questions or feedback, please reach out via email: [mahmoudelsayed.dev@gmail.com](mahmoudelsayed.dev@gmail.com)
